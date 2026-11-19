@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f4efe6;
+  --card: #fffdf8;
+  --ink: #1c1712;
+  --muted: #5f574c;
+  --line: #e4d8c6;
+  --pine: #0d6a50;
+  --pine-soft: #e4f3ec;
+  --stamp: #b8431b;
+  --stamp-soft: #fde7dc;
+  --shadow: 0 1px 0 rgba(28, 23, 18, 0.04);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-pine: var(--pine);
+  --color-pine-soft: var(--pine-soft);
+  --color-stamp: var(--stamp);
+  --color-stamp-soft: var(--stamp-soft);
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-plex), ui-monospace, monospace;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #d5efe4;
+}
+
+.ledger-rule {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    rgba(228, 216, 198, 0.7) 28px
+  );
+}
+
+input,
+select,
+textarea {
+  accent-color: var(--pine);
+}
